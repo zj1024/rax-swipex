@@ -1,14 +1,10 @@
 {
   "name": "rax-swipex",
-  "version": "0.0.1-beta2",
+  "version": "0.0.1-beta4",
   "description": "h5 mobile swiper, support horizontal and vertical mode",
   "author": "jingyu.zj",
   "main": "lib/index.js",
-  "module": "src/index.js",
-  "miniappConfig": {
-    "main": "lib/miniapp/index",
-    "main:wechat": "lib/wechat-miniprogram/index"
-  },
+  "module": "lib/index.js",
   "files": [
     "dist",
     "es",

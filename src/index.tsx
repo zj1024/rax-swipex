@@ -24,12 +24,12 @@ interface ISwipeXOptions {
   framework?: 'rax'
 }
 
-interface IProps {
+interface ISwipeXProps {
   swipeOptions: ISwipeXOptions
   [key: string]: any
 }
 
-interface ISwipeX {
+interface ISwipeXMethods {
   setup: () => void
   slide: (to?: number, speed?: number) => void
   prev: () => void
@@ -41,17 +41,17 @@ interface ISwipeX {
 }
 
 export default class extends Component {
-  public methods: ISwipeX
-  private containerEl: HTMLElement
-  private props: IProps
+  methods: ISwipeXMethods
+  containerEl: HTMLElement
+  props: ISwipeXProps
 
   componentDidMount() {
     setTimeout(() => {
       this.methods = SwipeX(this.containerEl, this.props.swipeOptions)
-    }, 16)
+    }, 100)
   }
 
-  componentDidUpdate(prevProps: IProps) {
+  componentDidUpdate(prevProps: ISwipeXProps) {
     const { swipeOptions, children } = this.props
     const shouldUpdateSwipeInstance =
       prevProps.children.length !== children.length ||
