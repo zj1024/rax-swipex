@@ -1,8 +1,8 @@
 {
   "name": "rax-swipex",
-  "author": "jingyu.zj",
-  "version": "0.0.1-beta1",
+  "version": "0.0.1-beta2",
   "description": "h5 mobile swiper, support horizontal and vertical mode",
+  "author": "jingyu.zj",
   "main": "lib/index.js",
   "module": "src/index.js",
   "miniappConfig": {
@@ -51,8 +51,5 @@
     "rax-test-renderer": "^1.0.0",
     "tslint": "^6.1.2",
     "typescript": "^3.7.5"
-  },
-  "publishConfig": {
-    "registry": "http://registry.npm.alibaba-inc.com"
   }
 }
