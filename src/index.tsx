@@ -22,6 +22,7 @@ interface ISwipeXOptions {
   callback?: (index: number, element: Element) => void
   transitionEnd?: (index: number, element: Element) => void
   framework?: 'rax'
+  debounce?: boolean
 }
 
 interface ISwipeXProps {
