@@ -44,6 +44,7 @@ export default class extends Component {
   methods: ISwipeXMethods
   containerEl: HTMLElement
   props: ISwipeXProps
+  lastIndex: number
 
   componentDidMount() {
     setTimeout(() => {
@@ -57,8 +58,10 @@ export default class extends Component {
       prevProps.children.length !== children.length ||
       !isEqual(prevProps.swipeOptions, swipeOptions)
     if (shouldUpdateSwipeInstance) {
+      this.lastIndex = this.methods.getPos()
       this.methods.kill()
       this.methods = SwipeX(this.containerEl, this.props.swipeOptions)
+      this.methods.slide(this.lastIndex)
     }
   }
 

@@ -1,12 +1,13 @@
 /*@jsx createElement */
 'use strict'
 
-import { createElement, render, useEffect, useRef } from 'rax'
+import { createElement, render, useState, useEffect, useRef } from 'rax'
 import DriverUniversal from 'driver-universal'
 import View from 'rax-view'
 import SwipeX from 'rax-swipex'
 
 const Demo = () => {
+  const [continuous, setContinuous] = useState(true)
   let swipeXRef = useRef(null)
 
   useEffect(() => {
@@ -18,7 +19,13 @@ const Demo = () => {
     console.log('[swipeX] public methods >>> ', swipeXRef.methods)
   })
 
-  const swipeOptions = { framework: 'rax', direction: 'vertical' }
+  const transitionEnd = index => {
+    if (index === 4) {
+      setContinuous(false)
+    }
+  }
+
+  const swipeOptions = { framework: 'rax', direction: 'vertical', transitionEnd, continuous }
 
   return (
     <Fragment>
