@@ -21,7 +21,6 @@ interface ISwipeXOptions {
   swiping?: (res: number) => void
   callback?: (index: number, element: Element) => void
   transitionEnd?: (index: number, element: Element) => void
-  framework?: 'rax'
   debounce?: boolean
 }
 
@@ -48,7 +47,7 @@ export default class extends Component {
 
   componentDidMount() {
     setTimeout(() => {
-      this.methods = SwipeX(this.containerEl, this.props.swipeOptions)
+      this.methods = SwipeX(this.containerEl, { ...this.props.swipeOptions, framework: 'rax' })
     }, 100)
   }
 
