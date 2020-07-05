@@ -91,11 +91,12 @@ export default class extends Component {
   }
 
   render() {
-    const { children, containerStyle, wrapperStyle } = this.props
+    const { children, containerStyle, wrapperStyle, ...leftProps } = this.props
     return (
       <View
         ref={(ref: Rax.Ref) => (this.containerEl = ref)}
-        style={{ ...styles.swipex, ...containerStyle }}>
+        style={{ ...styles.swipex, ...containerStyle }}
+        {...leftProps}>
         <View style={{ ...styles.swipexWrap, ...wrapperStyle }}>{children}</View>
       </View>
     )
