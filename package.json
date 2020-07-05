@@ -1,6 +1,6 @@
 {
   "name": "rax-swipex",
-  "version": "0.0.1-beta10",
+  "version": "0.0.1-beta11",
   "description": "h5 mobile swiper, support horizontal and vertical mode",
   "author": "jingyu.zj",
   "main": "lib/index.js",

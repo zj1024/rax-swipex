@@ -47,9 +47,7 @@ export default class extends Component {
   lastIndex: number
 
   componentDidMount() {
-    setTimeout(() => {
-      this.methods = SwipeX(this.containerEl, { ...this.props.swipeOptions, framework: 'rax' })
-    }, 100)
+    this.methods = SwipeX(this.containerEl, { ...this.props.swipeOptions, framework: 'rax' })
   }
 
   componentDidUpdate(prevProps: ISwipeXProps) {
@@ -70,23 +68,23 @@ export default class extends Component {
     this.methods = void 0
   }
 
-  next() {
+  next = () => {
     this.methods.next()
   }
 
-  prev() {
+  prev = () => {
     this.methods.prev()
   }
 
-  slide(to?: number, speed?: number) {
+  slide = (to?: number, speed?: number) => {
     this.methods.slide(to, speed)
   }
 
-  getPos() {
+  getPos = () => {
     return this.methods.getPos()
   }
 
-  getNumSlides() {
+  getNumSlides = () => {
     return this.methods.getNumSlides()
   }
 
