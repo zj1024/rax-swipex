@@ -13,7 +13,7 @@ const Other = () => {
     console.log('[swipeX] public methods >>> ', swipeXRef.methods)
   })
 
-  const swipeOptions = { framework: 'rax', direction: 'vertical' }
+  const swipeOptions = { framework: 'rax', direction: 'vertical', debounce: true }
 
   return (
     <Fragment>
