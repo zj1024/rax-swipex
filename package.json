@@ -32,7 +32,7 @@
     "lodash.isequal": "^4.5.0",
     "rax-text": "^1.0.0",
     "rax-view": "^1.0.0",
-    "swipex": "^0.0.1-beta7"
+    "swipex": "^0.0.1-beta8"
   },
   "devDependencies": {
     "@alib/build-scripts": "^0.1.0",
